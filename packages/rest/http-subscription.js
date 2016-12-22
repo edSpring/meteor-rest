@@ -9,6 +9,7 @@ HttpSubscription = function (options) {
 
   this.connection = new HttpConnection(options.request);
   this.userId = options.userId;
+  this.unblock = function() {};
 };
 
 // So that we can listen to ready event in a reasonable way

@@ -1,5 +1,6 @@
 SimpleRest = {};
 
+console.log('Edspring:SimpleRest');
 // Can be used to limit which collections get endpoints:
 // {
 //   collections: ['widgets', 'doodles']
@@ -56,7 +57,7 @@ Meteor.publish = function (name, handler, options) {
   _.defaults(httpOptions, {
     url: 'publications/' + name,
     getArgsFromRequest: defaultGetArgsFromRequest,
-    httpMethod: 'get',
+    httpMethod: 'post',
   });
 
   JsonRoutes.add(httpOptions.httpMethod, httpOptions.url, function (req, res) {
